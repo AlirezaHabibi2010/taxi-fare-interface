@@ -195,10 +195,10 @@ const predict = () => {
       };
       let query = []
       Object.keys(data).forEach((param) => {
-        query.push(`${param}=${data[param]}`)
+        query.push('${param}=${data[param]}')
       })
       const querystring = query.join('&')
-      const url = `${taxiFareApiUrl}?${querystring}`
+      const url = '${taxiFareApiUrl}?${querystring}'
       fetch(url, {
         method: 'GET',
         headers: {
